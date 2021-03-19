@@ -1,0 +1,34 @@
+.rollDicePage {
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+  background-color: cadetblue;
+}
+.theDice {
+  width: 200px;
+  height: 90px;
+  background-color: burlywood;
+}
+.rollBtn {
+  background-color: pink;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  margin-right: 10px;
+}
+.dice-image {
+  margin: 10px;
+}
+
+img {
+  width: 50px;
+}
+.rollMeBtn {
+  margin-top: 20px;
+}

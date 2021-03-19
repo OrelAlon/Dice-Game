@@ -1,0 +1,17 @@
+.player1,
+.player2 {
+  color: antiquewhite;
+  width: 300px;
+}
+.player1 {
+  background-color: rgb(34, 52, 129);
+}
+.player2 {
+  background-color: darkgreen;
+}
+#player1 {
+  background-color: black;
+}
+#player2 {
+  background-color: black;
+}
