@@ -6,7 +6,7 @@ import Player from './component/Player';
 ///
 const initialState = {
   currentPlayer: 'player1',
-  scoreGoal: 20,
+  scoreGoal: 50,
   player1: {
     currentScore: 0,
     totalScore: 0,
@@ -66,8 +66,6 @@ class App extends React.Component {
   };
   newGame = () => {
     this.setState(initialState);
-
-    console.log('!');
   };
 
   render() {
@@ -76,7 +74,6 @@ class App extends React.Component {
     const updateCurrentScore = this.state[playerTurn].currentScore;
     const updateTotalScore = this.state[playerTurn].totalScore;
 
-    console.log(this.state);
     if (updateTotalScore + updateCurrentScore >= scoreGoal) {
       this.winnerPlayer();
     }
@@ -102,6 +99,7 @@ class App extends React.Component {
           id='player2'
           currentScore={this.state.player2.currentScore}
           totalScore={this.state.player2.totalScore}
+          currentPlayer={playerTurn}
         />
       </div>
     );

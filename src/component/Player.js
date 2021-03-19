@@ -8,10 +8,25 @@ class Player extends React.Component {
 
   render() {
     return (
-      <div className={this.props.id} id={this.props.currentPlayer}>
-        <h2>{this.props.id}</h2>
-        <h1>{this.props.currentScore}</h1>
-        <h1>{this.props.totalScore}</h1>
+      <div className={this.props.id}>
+        <div
+          className='divPlayer'
+          id={
+            this.props.currentPlayer === this.props.id
+              ? this.props.id
+              : 'hidden'
+          }
+        >
+          <h1 className='namePlayer'>{this.props.id}</h1>
+          <div className='totalScore'>
+            <h2>Total Score :</h2>
+            <h1>{this.props.totalScore}</h1>
+          </div>
+          <div className='currentScore'>
+            <h2>Current Score : </h2>
+            <h1>{this.props.currentScore}</h1>
+          </div>
+        </div>
       </div>
     );
   }

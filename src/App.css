@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+body {
+  background-color: violet;
+}
 .mainPage {
   text-align: center;
   border: 1px solid grey;
   background-color: rgb(250, 250, 250);
 
-  width: 600px;
-  height: 650px;
+  width: 98vw;
+  height: 98vh;
   margin-top: 50px;
-  background-color: darkgray;
+  background-color: #24272e;
+  font-family: Asap, sans-serif;
+  color: rgb(233, 53, 53);
+
   display: flex;
   margin: auto;
 }
