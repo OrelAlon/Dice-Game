@@ -20,6 +20,7 @@ body {
   text-decoration: underline;
   font-size: 3vw;
   letter-spacing: 5px;
+  text-shadow: 0px 0px 15px rgb(179, 176, 176), 0px 0px 14px rgb(119, 114, 114);
 }
 /* THE SAVE Btn */
 
@@ -196,7 +197,7 @@ body {
   border: solid antiquewhite 5px;
   border-radius: 900px;
   margin: 1wh;
-  margin-top: 130px;
+  margin-top: 10vh;
   padding: 5vw;
 }
 .namePlayer {
