@@ -102,6 +102,10 @@ class App extends React.Component {
           <div className='mediaHead'></div>
           <h1 className='header'>Roll-Dice Game</h1>
           <div className='area'>⚠ Watch Out Of Doubles ⚠</div>
+          <h3 className='scoreGoal'>
+            Your Goal Is <span>{this.state.scoreGoal}</span>
+          </h3>
+
           <div className='mediaBtns'>
             <RollDice takeRoll={this.updateRollScore} />
             <div className='btns'>
