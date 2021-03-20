@@ -24,16 +24,21 @@ body {
 }
 .scoreGoal {
   color: antiquewhite;
+
   font-size: 2vw;
   letter-spacing: 5px;
   text-shadow: 0px 0px 15px rgb(179, 176, 176), 0px 0px 14px rgb(119, 114, 114);
 }
-.scoreGoal span {
-  color: #24272e;
-  background-color: antiquewhite;
+.scoreGoal input {
+  color: antiquewhite;
+  width: 30px;
+  font-size: 15px;
+  background-color: #24272e;
   border: solid antiquewhite;
   border-radius: 50%;
+  text-align: center;
   padding: 5px;
+  margin: 5px;
   text-shadow: 0px 0px 15px rgb(41, 38, 38), 0px 0px 14px rgb(119, 114, 114);
 }
 
@@ -279,11 +284,9 @@ img {
   } */
   #player1 {
     grid-area: a;
-    padding: 0;
   }
   #player2 {
     grid-area: b;
-    padding: 0;
   }
   .mediaBtns {
     grid-area: c;
