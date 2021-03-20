@@ -147,7 +147,7 @@ body {
   transition: all 0.5s;
   cursor: pointer;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .button:active {
   box-shadow: 0 5px #666;
@@ -276,26 +276,16 @@ img {
 @media only screen and (max-width: 1000px) {
   /* For tablets: */
 
-  /* .mainPage {
-    display: grid;
-    grid-template-areas:
-      ' . d d . '
-      ' a a b b '
-      ' c c c c ';
-  } */
-  #player1 {
-    grid-area: a;
-  }
-  #player2 {
-    grid-area: b;
-  }
   .mediaBtns {
-    grid-area: c;
     font-size: 6vw;
+    margin-top: 0;
+    margin-top: -80px;
   }
   .mediaHead {
-    grid-area: d;
     font-size: 20px;
+  }
+  button {
+    margin-top: -30px;
   }
   .button {
     font-size: 10px;
