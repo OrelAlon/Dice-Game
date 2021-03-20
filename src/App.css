@@ -1,30 +1,291 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 body {
-  background-color: violet;
-}
-.mainPage {
-  text-align: center;
-  border: 1px solid grey;
-  background-color: rgb(250, 250, 250);
+  background-color: antiquewhite;
+  border-radius: 10px;
 
   width: 98vw;
   height: 98vh;
-  margin-top: 50px;
-  background-color: #24272e;
-  font-family: Asap, sans-serif;
-  color: rgb(233, 53, 53);
 
+  background-color: #24272e;
+}
+.mainPage {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Asap, sans-serif;
   display: flex;
   margin: auto;
 }
+.header {
+  color: antiquewhite;
+  text-decoration: underline;
+  font-size: 3vw;
+  letter-spacing: 5px;
+}
+/* THE SAVE Btn */
 
-.holdBtn {
-  background-color: pink;
-  border: 2px solid black;
-  border-radius: 5px;
-  color: black;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 8px;
-  margin-right: 10px;
+.glow-on-hover {
+  width: 12vw;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: antiquewhite;
+  background: #24272e;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-family: Asap, sans-serif;
+  font-size: 25px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #191a1f;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btns {
+  display: grid;
+  grid-column: auto;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+}
+/* // */
+/* // */
+.button {
+  border-radius: 20px;
+  background-color: #191a1f;
+  border: none;
+  color: antiquewhite;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  width: 15vw;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-family: Asap, sans-serif;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.swal-overlay {
+  background-color: rgba(214, 216, 241, 0.45);
+}
+/* warnnig duobles */
+
+.area {
+  text-align: center;
+  letter-spacing: 3px;
+  color: #fff;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  animation: blur 0.75s ease-out;
+  animation-iteration-count: 3;
+  font-family: Asap, sans-serif;
+
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
+      0px 0px 50px #7b96b8, 0px 0px 150px #7b96b8, 0px 10px 100px #7b96b8,
+      0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
+      0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
+  }
+}
+
+/* css player */
+.player1,
+.player2 {
+  color: antiquewhite;
+
+  width: 30vw;
+  margin: 0 1vw;
+  background-color: #24272e;
+}
+.divPlayer {
+  border: solid antiquewhite 5px;
+  border-radius: 900px;
+  margin: 1wh;
+  margin-top: 130px;
+  padding: 5vw;
+}
+.namePlayer {
+  text-decoration: underline;
+  font-size: 2vw;
+}
+h2 {
+  font-size: 1.5vw;
+}
+#player1,
+#player2 {
+  border: solid antiquewhite 10px;
+  box-shadow: rgba(189, 185, 185, 0.56) 0px 22px 70px 4px;
+}
+
+/* 
+rolldice css
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+.rollDicePage {
+  font-family: Asap, sans-serif;
+  /* background-color: #24272e; */
+  text-align: center;
+  margin: auto;
+
+  width: 40vw;
+  margin-top: 50px;
+}
+.theDice {
+  /* background-color: whitesmoke; */
+  height: 100px;
+  margin-top: 100px;
+}
+
+.dice-image {
+  margin: 10px;
+  background-color: antiquewhite;
+  border-radius: 8px;
+}
+
+img {
+  width: 5vw;
+}
+.rollMeBtn {
+  margin-top: 20px;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+}
+@media only screen and (max-width: 800px) {
+  /* For tablets: */
+
+  .mainPage {
+    display: grid;
+    grid-template-areas:
+      ' . d d . '
+      ' a a b b '
+      ' c c c c ';
+  }
+  #player1 {
+    grid-area: a;
+    padding: 0;
+  }
+  #player2 {
+    grid-area: b;
+    padding: 0;
+  }
+  .mediaBtns {
+    grid-area: c;
+    font-size: 6vw;
+  }
+  .mediaHead {
+    grid-area: d;
+    font-size: 20px;
+  }
+  .button {
+    font-size: 10px;
+  }
+  .glow-on-hover {
+    font-size: 12px;
+  }
+  .dice-image {
+    display: flex;
+  }
+
+  .dice-image {
+    margin: auto;
+    margin-top: 10px;
+  }
 }

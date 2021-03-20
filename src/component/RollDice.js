@@ -1,7 +1,6 @@
 import React from 'react';
 
-import './RollDice.css';
-
+import '../App.css';
 const DiceImage = ({ roll }) => {
   if (roll === 1) {
     return (
@@ -74,7 +73,7 @@ class RollDice extends React.Component {
       },
       () => {}
     );
-    this.props.takeRoll(rollSum);
+    this.props.takeRoll(rollSum, rolls);
   };
   // Start timer of one sec when rolling start
   //   setTimeout(() => {
@@ -92,7 +91,11 @@ class RollDice extends React.Component {
           ))}
         </div>
         <div className='rollMeBtn'>
-          <button onClick={() => this.diceRoll(2)} className='rollBtn'>
+          <button
+            className='glow-on-hover'
+            type='button'
+            onClick={() => this.diceRoll(2)}
+          >
             Roll Me
           </button>
         </div>

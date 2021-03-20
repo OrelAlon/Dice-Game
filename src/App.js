@@ -2,8 +2,12 @@ import './App.css';
 import React from 'react';
 import RollDice from './component/RollDice';
 import Player from './component/Player';
+import swal from 'sweetalert';
+
 ///
-///
+// /
+//
+//
 const initialState = {
   currentPlayer: 'player1',
   scoreGoal: 50,
@@ -18,16 +22,17 @@ const initialState = {
 
   /* etc */
 };
+
 //
 //
 class App extends React.Component {
   state = initialState;
-  updateRollScore = (rollSum) => {
+  updateRollScore = (rollSum, rolls) => {
     const playerTurn = this.state.currentPlayer;
     const updateCurrentScore = this.state[playerTurn].currentScore;
     const updateTotalScore = this.state[playerTurn].totalScore;
 
-    if (rollSum !== 12) {
+    if (rolls[0] !== rolls[1]) {
       this.setState(() => ({
         [playerTurn]: {
           currentScore: updateCurrentScore + rollSum,
@@ -42,6 +47,10 @@ class App extends React.Component {
         },
       });
       this.passTurn();
+      swal('You Got Double! ' + this.state.currentPlayer + ' Turn Now', {
+        buttons: false,
+        timer: 2000,
+      });
     }
   };
 
@@ -61,7 +70,10 @@ class App extends React.Component {
     }));
   };
   winnerPlayer = () => {
-    alert(this.state.currentPlayer + ' Is The WINNER!');
+    swal(this.state.currentPlayer + ' Is The WINNER!', {
+      buttons: false,
+    });
+
     return this.newGame();
   };
   newGame = () => {
@@ -69,6 +81,7 @@ class App extends React.Component {
   };
 
   render() {
+    console.log(this.input1);
     const playerTurn = this.state.currentPlayer;
     const scoreGoal = this.state.scoreGoal;
     const updateCurrentScore = this.state[playerTurn].currentScore;
@@ -86,14 +99,25 @@ class App extends React.Component {
           currentPlayer={playerTurn}
         />
         <div>
-          <button onClick={this.newGame} className='holdBtn'>
-            New Game
-          </button>
-          <h1>Roll-Dice Game</h1>
-          <RollDice takeRoll={this.updateRollScore} />
-          <button onClick={this.passTurn} className='holdBtn'>
-            HOLD
-          </button>
+          <div className='mediaHead'></div>
+          <h1 className='header'>Roll-Dice Game</h1>
+          <div className='area'>⚠ Watch Out Of Doubles ⚠</div>
+          <div className='mediaBtns'>
+            <RollDice takeRoll={this.updateRollScore} />
+            <div className='btns'>
+              <button
+                className='glow-on-hover'
+                id='saveBtn'
+                type='button'
+                onClick={this.passTurn}
+              >
+                Save Your Score!
+              </button>
+              <button onClick={this.newGame} className='button'>
+                <span> New Game </span>
+              </button>
+            </div>
+          </div>
         </div>
         <Player
           id='player2'
