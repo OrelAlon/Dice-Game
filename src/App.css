@@ -29,17 +29,18 @@ body {
   letter-spacing: 5px;
   text-shadow: 0px 0px 15px rgb(179, 176, 176), 0px 0px 14px rgb(119, 114, 114);
 }
-.scoreGoal input {
+.inputGoal {
   color: antiquewhite;
   width: 30px;
-  font-size: 15px;
+  font-size: 20px;
   background-color: #24272e;
   border: solid antiquewhite;
   border-radius: 50%;
   text-align: center;
-  padding: 5px;
-  margin: 5px;
-  text-shadow: 0px 0px 15px rgb(41, 38, 38), 0px 0px 14px rgb(119, 114, 114);
+  padding: 10px;
+  margin: 10px;
+  /* margin-top: -100px; */
+  box-shadow: 0px 0px 15px rgb(194, 191, 191), 0px 0px 14px rgb(119, 114, 114);
 }
 
 /* THE SAVE Btn */

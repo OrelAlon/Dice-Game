@@ -102,15 +102,14 @@ class App extends React.Component {
           <div className='mediaHead'></div>
           <h1 className='header'>Roll-Dice Game</h1>
           <div className='area'>⚠ Watch Out Of Doubles ⚠</div>
-          <h3 className='scoreGoal'>
-            Choose Your Goal
-            <input
-              value={this.state.scoreGoal}
-              onChange={async (e) => {
-                await this.setState({ scoreGoal: e.target.value });
-              }}
-            ></input>
-          </h3>
+          <h3 className='scoreGoal'>Choose Your Goal</h3>
+          <input
+            className='inputGoal'
+            value={this.state.scoreGoal}
+            onChange={async (e) => {
+              await this.setState({ scoreGoal: e.target.value });
+            }}
+          ></input>
 
           <div className='mediaBtns'>
             <RollDice takeRoll={this.updateRollScore} />
