@@ -35,7 +35,7 @@ body {
   z-index: 0;
   border-radius: 10px;
   font-family: Asap, sans-serif;
-  font-size: 25px;
+  font-size: 1.5vh;
   margin: auto;
   margin-top: 50px;
 }
@@ -209,7 +209,7 @@ h2 {
 #player1,
 #player2 {
   border: solid antiquewhite 10px;
-  box-shadow: rgba(189, 185, 185, 0.56) 0px 22px 70px 4px;
+  box-shadow: rgba(189, 185, 185, 0.56) 0px 22px 70px 80px;
 }
 
 /* 
@@ -248,16 +248,16 @@ img {
   align-items: center;
   margin: auto;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   /* For tablets: */
 
-  .mainPage {
+  /* .mainPage {
     display: grid;
     grid-template-areas:
       ' . d d . '
       ' a a b b '
       ' c c c c ';
-  }
+  } */
   #player1 {
     grid-area: a;
     padding: 0;
